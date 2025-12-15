@@ -92,14 +92,6 @@ jobs:
         run: |
           pnpm install
           pnpm test:e2e:build
-
-      - name: Log
-        run: |
-          cat ./podman-desktop/package.json
-          cat ./crc-extension/package.json
-          ls -la ./podman-desktop
-          ls -la ./crc-extension
-          ls -la ./sso-extension
       
       - name: Execute pnpm in CRC Extension
         working-directory: ./crc-extension
